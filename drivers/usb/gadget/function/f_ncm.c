@@ -17,6 +17,7 @@
 #include <linux/device.h>
 #include <linux/etherdevice.h>
 #include <linux/crc32.h>
+#include <linux/string_choices.h>
 
 #include <linux/usb/cdc.h>
 
@@ -558,7 +559,7 @@ static void ncm_do_notify(struct f_ncm *ncm)
 		req->length = sizeof *event;
 
 		DBG(cdev, "notify connect %s\n",
-				ncm->is_open ? "true" : "false");
+				str_true_false(ncm->is_open));
 		ncm->notify_state = NCM_NOTIFY_NONE;
 		break;
 
@@ -878,7 +879,7 @@ static int ncm_set_alt(struct usb_function *f, unsigned intf, unsigned alt)
 		if (alt > 1)
 			goto fail;
 
-		if (ncm->port.in_ep->enabled) {
+		if (ncm->netdev) {
 			DBG(cdev, "reset ncm\n");
 			ncm->netdev = NULL;
 			gether_disconnect(&ncm->port);
@@ -1338,7 +1339,15 @@ parse_ntb:
 	     "Parsed NTB with %d frames\n", dgram_counter);
 
 	to_process -= block_len;
-	if (to_process != 0) {
+
+	/*
+	 * Windows NCM driver avoids USB ZLPs by adding a 1-byte
+	 * zero pad as needed.
+	 */
+	if (to_process == 1 &&
+	    (*(unsigned char *)(ntb_ptr + block_len) == 0x00)) {
+		to_process--;
+	} else if ((to_process > 0) && (block_len != 0)) {
 		ntb_ptr = (unsigned char *)(ntb_ptr + block_len);
 		goto parse_ntb;
 	}
@@ -1359,7 +1368,7 @@ static void ncm_disable(struct usb_function *f)
 
 	DBG(cdev, "ncm deactivated\n");
 
-	if (ncm->port.in_ep->enabled) {
+	if (ncm->netdev) {
 		ncm->netdev = NULL;
 		gether_disconnect(&ncm->port);
 	}
@@ -1789,5 +1798,6 @@ static struct usb_function *ncm_alloc(struct usb_function_instance *fi)
 }
 
 DECLARE_USB_FUNCTION_INIT(ncm, ncm_alloc_inst, ncm_alloc);
+MODULE_DESCRIPTION("USB CDC Network (NCM) link function driver");
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Yauheni Kaliuta");
