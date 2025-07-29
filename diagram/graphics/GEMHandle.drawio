@@ -4,61 +4,21 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-1" value="&lt;b style=&quot;text-align: center;&quot;&gt;dma_buf_fd =&amp;nbsp;&lt;/b&gt;&lt;b&gt;drmPrimeHandleToFD&lt;/b&gt;(drm_fd,&amp;nbsp;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;b&gt;prime_handle&lt;/b&gt;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;b&gt;proposed_flags&lt;/b&gt;)&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-1" value="&lt;b style=&quot;text-align: center;&quot;&gt;dma_buf_fd =&amp;nbsp;&lt;/b&gt;&lt;b&gt;drmPrimeHandleToFD&lt;/b&gt;(&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; drm_fd,&amp;nbsp;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;prime_handle&lt;/b&gt;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;proposed_flags&lt;/b&gt;)&lt;/div&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;exitX=0.85;exitY=0.543;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.2;entryY=0.543;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-45" target="Bdr8OlQVO2TdqHxg7Gel-59">
           <mxGeometry x="-0.8571" width="160" relative="1" as="geometry">
             <mxPoint x="120" y="640" as="sourcePoint" />
             <mxPoint x="400" y="640" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-2" value="&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Userspace:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; drmIoctl(&lt;span style=&quot;font-size: 11px;&quot;&gt;drm_fd&lt;/span&gt;)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;└─ sys_ioctl&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; └─&amp;nbsp;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;ioctl&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;(drm_fd,&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;prime_handle,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;proposed_flags)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;b&gt;DRM_IOCTL_PRIME_HANDLE_TO_FD&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-2" value="&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Userspace:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; drmIoctl(&lt;span style=&quot;font-size: 11px;&quot;&gt;drm_fd&lt;/span&gt;)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;└─ sys_ioctl&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; └─&amp;nbsp;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;ioctl&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;(drm_fd,&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;prime_handle,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;proposed_flags)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;DRM_IOCTL_PRIME_HANDLE_TO_FD&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;exitX=1.1;exitY=0.583;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.2;entryY=0.581;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-59" target="Bdr8OlQVO2TdqHxg7Gel-60">
           <mxGeometry x="-0.871" width="160" relative="1" as="geometry">
             <mxPoint x="400" y="680" as="sourcePoint" />
             <mxPoint x="710" y="680" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-3" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="320" y="40" width="164" height="1040" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-3" source="Bdr8OlQVO2TdqHxg7Gel-5">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="81" y="1040" as="targetPoint" />
-            <mxPoint x="81" y="86.66666666666666" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-5" value="&lt;div&gt;&lt;b&gt;libpvr_dri.so&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;libgbm.so&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;libdrm.so&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-3">
-          <mxGeometry width="164" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-3" source="Bdr8OlQVO2TdqHxg7Gel-5" target="Bdr8OlQVO2TdqHxg7Gel-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-39" value="&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Userspace:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; drmIoctl(&lt;span style=&quot;font-size: 11px;&quot;&gt;drm_fd&lt;/span&gt;)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;└─ sys_ioctl&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; └─&amp;nbsp;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;ioctl&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;(drm_fd,&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;prime_handle,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;proposed_flags)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;DRM_IOCTL_PVR_CREATE_BO&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-3">
-          <mxGeometry x="-0.8125" width="160" relative="1" as="geometry">
-            <mxPoint x="80" y="160" as="sourcePoint" />
-            <mxPoint x="400" y="160" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-40" value="&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;App&lt;/b&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;└ gbm_bo_create()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; └ Mesa/libgbm backend&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; └ drmIoctl(fd, )&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-3">
-          <mxGeometry x="-0.6429" width="160" relative="1" as="geometry">
-            <mxPoint x="-200" y="120" as="sourcePoint" />
-            <mxPoint x="80" y="120" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-7" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="40" y="40" width="164" height="1040" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-8" value="&lt;b&gt;UserApp&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-7">
-          <mxGeometry width="164" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-9" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-7" source="Bdr8OlQVO2TdqHxg7Gel-8">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="82" y="1040" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-10" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-10" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1.05;entryY=0.875;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.05;exitY=0.877;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-60" target="Bdr8OlQVO2TdqHxg7Gel-59">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="720" y="959" as="sourcePoint" />
             <mxPoint x="400" y="959" as="targetPoint" />
@@ -70,7 +30,7 @@
             <mxPoint x="22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-12" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-12" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=0.917;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Bdr8OlQVO2TdqHxg7Gel-45">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="400" y="998" as="sourcePoint" />
             <mxPoint x="120" y="998.0005263157896" as="targetPoint" />
@@ -82,71 +42,19 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-21" value="" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1275" y="40" width="164" height="1040" as="geometry" />
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-21" value="" style="group;container=0;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1275" y="40" width="164" height="1290" as="geometry" />
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-22" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-21" source="Bdr8OlQVO2TdqHxg7Gel-23">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="1040" as="targetPoint" />
-            <mxPoint x="80" y="74.28571428571429" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-23" value="&lt;b&gt;pvrsrvkm.ko&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-21">
-          <mxGeometry width="164" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-18" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="920" y="40" width="164" height="1060" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-19" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-18" source="Bdr8OlQVO2TdqHxg7Gel-20">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="1060" as="targetPoint" />
-            <mxPoint x="79" y="75.7142857142857" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-20" value="&lt;b&gt;dmaBuf core&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-18">
-          <mxGeometry width="164" height="40.76923076923077" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-36" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.003;exitY=0.838;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-18">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="440.96000000000004" y="361.1199999999999" as="sourcePoint" />
-            <mxPoint x="-200" y="360" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-37" value="return&amp;nbsp;&lt;b style=&quot;text-align: left;&quot;&gt;prime_handle&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Bdr8OlQVO2TdqHxg7Gel-36">
-          <mxGeometry x="0.1583" y="-2" relative="1" as="geometry">
-            <mxPoint x="190" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-35" value="&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Kernel:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;drm_ioctl()&lt;div&gt;&amp;nbsp; &amp;nbsp; drm_ioctl_kernel()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;PVRSRV_BridgeDispatchKM()&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;entryX=0.009;entryY=0.121;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-18" target="Bdr8OlQVO2TdqHxg7Gel-34">
-          <mxGeometry x="-0.8444" y="1" width="160" relative="1" as="geometry">
-            <mxPoint x="-200" y="200" as="sourcePoint" />
-            <mxPoint x="360" y="200" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-24" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="640" y="40" width="160" height="1040" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-25" value="&lt;b&gt;Userspace | Kernel&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-24">
-          <mxGeometry width="160" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#d6b656;rounded=0;fillColor=#fff2cc;gradientColor=#ffd966;endFill=0;strokeWidth=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-24" source="Bdr8OlQVO2TdqHxg7Gel-25">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80.22000000000003" y="1040" as="targetPoint" />
-            <mxPoint x="79.22000000000003" y="74.28571428571429" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-27" value="&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Kernel:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;drm_ioctl()&lt;div&gt;&amp;nbsp; &amp;nbsp; drm_ioctl_kernel()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;drm_prime_handle_to_fd_ioctl()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;dev-&amp;gt;driver-&amp;gt;&lt;b&gt;prime_handle_to_fd&lt;/b&gt;()&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-27" value="&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Kernel:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;drm_ioctl()&lt;div&gt;&amp;nbsp; &amp;nbsp; drm_ioctl_kernel()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;drm_prime_handle_to_fd_ioctl()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; dev-&amp;gt;driver-&amp;gt;&lt;b&gt;prime_handle_to_fd&lt;/b&gt;()&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;entryX=0;entryY=0.585;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.15;exitY=0.583;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-60" target="Bdr8OlQVO2TdqHxg7Gel-47">
           <mxGeometry x="-0.892" y="1" width="160" relative="1" as="geometry">
             <mxPoint x="730" y="680" as="sourcePoint" />
             <mxPoint x="1000" y="680" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-28" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-28" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=0.835;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.2;exitY=0.833;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-47" target="Bdr8OlQVO2TdqHxg7Gel-60">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1000" y="919.9971428571428" as="sourcePoint" />
+            <mxPoint x="990" y="920" as="sourcePoint" />
             <mxPoint x="720" y="919.9971428571428" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -157,7 +65,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Bdr8OlQVO2TdqHxg7Gel-30" value="&lt;b style=&quot;font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp; PhysmemGEMPrimeExport&lt;/b&gt;&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;()&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; dma_buf = drm_gem_dmabuf_export(GEMObj)&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Create a dma_buf from GEM&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Set dma_buf flags&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Attach sPVRDmaBufOpsGEM&lt;/div&gt;&lt;div&gt;&amp;nbsp; return&amp;nbsp;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-wrap-mode: nowrap; font-size: 11px; text-align: center;&quot;&gt;dma_buf&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1360" y="680" width="320" height="240" as="geometry" />
+          <mxGeometry x="1370" y="680" width="320" height="240" as="geometry" />
         </mxCell>
         <mxCell id="Bdr8OlQVO2TdqHxg7Gel-32" value="Userspace&#xa;└── ioctl(fd, DRM_IOCTL_PRIME_HANDLE_TO_FD, ...)&#xa;    └── drm_ioctl()&#xa;        └── drm_ioctl_kernel()&#xa;            └── drm_ioctl_prime_handle_to_fd()&#xa;                └── drm_gem_prime_handle_to_fd()&#xa;                    └── drm_gem_prime_export()&#xa;                        └── [driver: gem_prime_export()] → dma_buf_export()" style="text;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1036" y="1200" width="410" height="140" as="geometry" />
@@ -166,12 +74,12 @@
           <mxGeometry x="540" y="1200" width="410" height="140" as="geometry" />
         </mxCell>
         <mxCell id="Bdr8OlQVO2TdqHxg7Gel-34" value="&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp; PVRSRV_BridgeDispatchKM():&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; PVRSRVBridgePhysmemExportGemHandle&lt;/span&gt;&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; PhysmemExportGemHandle&lt;/b&gt;()&lt;/span&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PhysmemGetOrCreatePMRWrapper(PMR,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;amp;PMRWrapper&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Create GEMObj using PMRWrapper&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; drm_gem_private_object_init(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GEMOb)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;prime_handle&lt;/b&gt;&lt;/span&gt;&amp;nbsp;= drm_gem_handle_create(GEMObj)&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return&amp;nbsp;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;b&gt;prime_handle&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1360" y="210" width="320" height="240" as="geometry" />
+          <mxGeometry x="1370" y="210" width="320" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-16" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-16" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.79;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-63">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1350" y="880" as="sourcePoint" />
-            <mxPoint x="1000" y="880" as="targetPoint" />
+            <mxPoint x="1010" y="880" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -180,9 +88,9 @@
             <mxPoint x="12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-14" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-14" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=-0.05;entryY=0.626;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Bdr8OlQVO2TdqHxg7Gel-63">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1000" y="720" as="sourcePoint" />
+            <mxPoint x="1010" y="720" as="sourcePoint" />
             <mxPoint x="1360" y="720" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -195,7 +103,7 @@
         <mxCell id="Bdr8OlQVO2TdqHxg7Gel-38" value="Application&#xa;└── gbm_bo_create()&#xa;    └── Mesa/libgbm backend (gbm_pvr_bo_create)&#xa;        └── drmIoctl(fd, DRM_IOCTL_PVR_CREATE_BO)&#xa;            └── sys_ioctl&#xa;                └── drm_ioctl()&#xa;                    └── pvr_drm_ioctl_create_bo()&#xa;                        └── PVRSRVBridge...Create()&#xa;                            └── PhysmemCreateHandle()&#xa;                                └── drm_gem_object_alloc()&#xa;                                └── drm_gem_handle_create()" style="text;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="120" y="1200" width="340" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-41" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-41" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1.1;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.05;exitY=0.335;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-60" target="Bdr8OlQVO2TdqHxg7Gel-59">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="720" y="440" as="sourcePoint" />
             <mxPoint x="400" y="440" as="targetPoint" />
@@ -207,7 +115,7 @@
             <mxPoint x="22" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-43" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-43" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.95;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.1;exitY=0.377;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-59" target="Bdr8OlQVO2TdqHxg7Gel-45">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="400" y="479" as="sourcePoint" />
             <mxPoint x="120" y="479.00052631578956" as="targetPoint" />
@@ -217,6 +125,135 @@
         <mxCell id="Bdr8OlQVO2TdqHxg7Gel-44" value="return&amp;nbsp;&lt;b style=&quot;text-align: left;&quot;&gt;prime_handle&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Bdr8OlQVO2TdqHxg7Gel-43">
           <mxGeometry x="0.175" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-46" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;" edge="1" parent="1" target="Bdr8OlQVO2TdqHxg7Gel-45">
+          <mxGeometry x="-0.8571" width="160" relative="1" as="geometry">
+            <mxPoint x="120" y="640" as="sourcePoint" />
+            <mxPoint x="400" y="640" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-66" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="920" y="40" width="164" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-19" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-66" source="Bdr8OlQVO2TdqHxg7Gel-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="1080" as="targetPoint" />
+            <mxPoint x="79" y="77.14285714285712" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-20" value="&lt;b&gt;dmaBuf core&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-66">
+          <mxGeometry width="164" height="40.76923076923076" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-47" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-66">
+          <mxGeometry x="70" y="80" width="20" height="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-35" value="&lt;div&gt;&lt;div&gt;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Kernel:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;drm_ioctl()&lt;div&gt;&amp;nbsp; &amp;nbsp; drm_ioctl_kernel()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;PVRSRV_BridgeDispatchKM()&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;entryX=-0.15;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.125;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-60" target="Bdr8OlQVO2TdqHxg7Gel-63">
+          <mxGeometry x="-0.8444" y="1" width="160" relative="1" as="geometry">
+            <mxPoint x="720" y="243.77358490566039" as="sourcePoint" />
+            <mxPoint x="1280" y="243.77358490566039" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-36" value="" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=-0.15;exitY=0.294;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.15;entryY=0.293;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-63" target="Bdr8OlQVO2TdqHxg7Gel-60">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1360.96" y="407.93358490566027" as="sourcePoint" />
+            <mxPoint x="720" y="406.79245283018867" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-37" value="return&amp;nbsp;&lt;b style=&quot;text-align: left;&quot;&gt;prime_handle&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Bdr8OlQVO2TdqHxg7Gel-36">
+          <mxGeometry x="0.1583" y="-2" relative="1" as="geometry">
+            <mxPoint x="190" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-65" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1275" y="40" width="164" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-22" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-65" source="Bdr8OlQVO2TdqHxg7Gel-63">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="1080" as="targetPoint" />
+            <mxPoint x="80" y="74.28571428571429" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-23" value="&lt;b&gt;pvrsrvkm.ko&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-65">
+          <mxGeometry width="164" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-63" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-65">
+          <mxGeometry x="72" y="80" width="20" height="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-64" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-65" source="Bdr8OlQVO2TdqHxg7Gel-23" target="Bdr8OlQVO2TdqHxg7Gel-63">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1355" y="1080" as="targetPoint" />
+            <mxPoint x="1357" y="80" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-67" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="640" y="40" width="160" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-25" value="&lt;b&gt;Userspace | Kernel&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-67">
+          <mxGeometry width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#040302;rounded=0;fillColor=#fff2cc;gradientColor=#ffd966;endFill=0;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-67" source="Bdr8OlQVO2TdqHxg7Gel-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="1080" as="targetPoint" />
+            <mxPoint x="79.22000000000003" y="74.28571428571429" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-60" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-67">
+          <mxGeometry x="70" y="80" width="20" height="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-61" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#040302;rounded=0;fillColor=#fff2cc;gradientColor=#ffd966;endFill=0;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-67" source="Bdr8OlQVO2TdqHxg7Gel-25" target="Bdr8OlQVO2TdqHxg7Gel-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="1080" as="targetPoint" />
+            <mxPoint x="80" y="40" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-39" value="&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Userspace:&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; drmIoctl(&lt;span style=&quot;font-size: 11px;&quot;&gt;drm_fd&lt;/span&gt;)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;└─ sys_ioctl&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; └─&amp;nbsp;&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;ioctl&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;(drm_fd,&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;prime_handle,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;proposed_flags)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;DRM_IOCTL_PVR_CREATE_BO&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;exitX=1.1;exitY=0.083;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-59" target="Bdr8OlQVO2TdqHxg7Gel-60">
+          <mxGeometry x="-0.8125" width="160" relative="1" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="690" y="200" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-40" value="&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;App&lt;/b&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;└ gbm_bo_create()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; └ Mesa/libgbm backend&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; └ drmIoctl(fd, )&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;align=left;exitX=1.1;exitY=0.044;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.15;entryY=0.042;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Bdr8OlQVO2TdqHxg7Gel-45" target="Bdr8OlQVO2TdqHxg7Gel-59">
+          <mxGeometry x="-0.6429" width="160" relative="1" as="geometry">
+            <mxPoint x="120" y="160" as="sourcePoint" />
+            <mxPoint x="400" y="160" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-70" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="320" y="40" width="164" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-70" source="Bdr8OlQVO2TdqHxg7Gel-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="81" y="1080" as="targetPoint" />
+            <mxPoint x="81" y="86.66666666666666" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-5" value="&lt;div&gt;&lt;b&gt;libpvr_dri.so&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;libgbm.so&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;libdrm.so&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-70">
+          <mxGeometry width="164" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-59" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-70">
+          <mxGeometry x="70" y="80" width="20" height="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-70" source="Bdr8OlQVO2TdqHxg7Gel-5" target="Bdr8OlQVO2TdqHxg7Gel-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-71" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="40" y="40" width="164" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-45" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-71">
+          <mxGeometry x="70" y="80" width="20" height="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-8" value="&lt;b&gt;UserApp&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="Bdr8OlQVO2TdqHxg7Gel-71">
+          <mxGeometry width="164" height="41.53846153846153" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-9" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=none;endSize=8;strokeColor=#666666;rounded=0;fillColor=#f5f5f5;gradientColor=#b3b3b3;endFill=0;" edge="1" parent="Bdr8OlQVO2TdqHxg7Gel-71" source="Bdr8OlQVO2TdqHxg7Gel-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82" y="1080" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
