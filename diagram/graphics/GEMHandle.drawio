@@ -150,6 +150,12 @@
         <mxCell id="Bdr8OlQVO2TdqHxg7Gel-30" value="&lt;b style=&quot;font-size: 11px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp; PhysmemGEMPrimeExport&lt;/b&gt;&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;()&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; dma_buf = drm_gem_dmabuf_export(GEMObj)&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Create a dma_buf from GEM&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Set dma_buf flags&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Attach sPVRDmaBufOpsGEM&lt;/div&gt;&lt;div&gt;&amp;nbsp; return&amp;nbsp;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-wrap-mode: nowrap; font-size: 11px; text-align: center;&quot;&gt;dma_buf&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1360" y="680" width="320" height="240" as="geometry" />
         </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-32" value="Userspace&#xa;└── ioctl(fd, DRM_IOCTL_PRIME_HANDLE_TO_FD, ...)&#xa;    └── drm_ioctl()&#xa;        └── drm_ioctl_kernel()&#xa;            └── drm_ioctl_prime_handle_to_fd()&#xa;                └── drm_gem_prime_handle_to_fd()&#xa;                    └── drm_gem_prime_export()&#xa;                        └── [driver: gem_prime_export()] → dma_buf_export()" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1560" width="410" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdr8OlQVO2TdqHxg7Gel-33" value="Userspace&#xa;└── ioctl(fd, DRM_IOCTL_PVR_CREATE_BO, &amp;args)&#xa;    └── drm_ioctl()&#xa;        └── drm_ioctl_kernel()&#xa;            └── pvr_drm_create_bo()              ← PowerVR DRM ioctl&#xa;                └── PVRSRVBridge...Create()      ← Services bridge call&#xa;                    └── PhysmemCreateHandle()    ← Server memory mgmt&#xa;                        └── drm_gem_handle_create()" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1360" width="410" height="140" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
